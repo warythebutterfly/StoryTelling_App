@@ -128,13 +128,16 @@ function addressAutocomplete(containerElement, callback, options) {
         //     });
         //   });
 
-          const selElement = document.createElement("select");
+          
+
+            data.results.forEach((result,index)=>{
+
+              const selElement = document.createElement("select");
             selElement.setAttribute("class", "autocomplete-items form-control rounded");
-            selElement.setAttribute("multiple", "");
+            //selElement.setAttribute("multiple", "");
 
             autocompleteItemsElement.appendChild(selElement);
 
-            data.results.forEach((result,index)=>{
                 var option = document.createElement("option");
               option.value = result.formatted;
               option.text = result.formatted;
@@ -251,5 +254,5 @@ function addressAutocomplete(containerElement, callback, options) {
     console.log(data);
     chosenLocation = data
   }, {
-    placeholder: "Enter an address here"
+    placeholder: "Enter a location here"
   });
