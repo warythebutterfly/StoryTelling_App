@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="custom/custom.css">
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Add Story | Story Teller</title>
@@ -23,23 +21,7 @@
         <link rel="stylesheet" href="css/custom.css">
         <!-- Favicon-->
         <link rel="shortcut icon" href="img/favicon.png?3">
-        <!-- script for google maps api -->
-        
-        <script>
-          function initialize() {
-  var input = document.getElementById('searchTextField');
-  var requestOptions = {
-  method: 'GET',
-  input : input,
-};
-
-fetch("https://api.geoapify.com/v2/places?categories=commercial.supermarket&filter=rect%3A10.716463143326969%2C48.755151258420966%2C10.835314015356737%2C48.680903341613316&limit=20&apiKey=b4ec80bc699245f9b42107b652079ef3", requestOptions)
-  .then(response => response.json())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-}
-         
-      </script>
+    
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -91,7 +73,7 @@ fetch("https://api.geoapify.com/v2/places?categories=commercial.supermarket&filt
                     <h3 class="h6 text-uppercase mb-0">Add A Story</h3>
                   </div>
                   <div class="card-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" id="addStoryForm">
                       <div class="form-group row">
                         <label class="col-md-3 form-control-label">Image</label>
                         <div class="col-md-9">
@@ -132,15 +114,17 @@ fetch("https://api.geoapify.com/v2/places?categories=commercial.supermarket&filt
                         <label class="col-md-3 form-control-label">Location</label>
                         <div class="col-md-9 select mb-3">
                             <!-- IMPLEMENT GOOGLE MAPS DROPDOWN HERE -->
-                            <input id="searchTextField" onclick="initialize()" type="text" size="50" class="form-control">
-                          <select name="type" class="form-control" id="storylocation" required>
-                            <option>Select location</option>
+              <div class="autocomplete-container" id="autocomplete-container"></div>
+
+                        </div>
+                        <!-- <div class="col-md-9 ml-auto select">
+                          <select multiple="" class="autocomplete-items form-control rounded">
                             <option>option 1</option>
                             <option>option 2</option>
                             <option>option 3</option>
                             <option>option 4</option>
                           </select>
-                        </div>
+                        </div> -->
                        
                       </div>
                       <div class="line"></div>
@@ -249,7 +233,32 @@ fetch("https://api.geoapify.com/v2/places?categories=commercial.supermarket&filt
       </div>
     </div>
     <!-- JavaScript files-->
-   
+    <script src="address.js"></script>
+    <script>
+        document.getElementById("addStoryForm").addEventListener("onchange", function(e){
+              e.preventDefault()
+            /*
+               the longitude and latitude values are automatically returned by the api and that's what you need 
+               to store in your database. 
+              
+               You can then use the stored lon and lat values to retrieve the address later. check the getAddress.js file,
+               you will see how that works. 
+              
+               
+              */
+              let longitude = chosenLocation.lon;
+              let latitude = chosenLocation.lat;
+
+              let location = chosenLocation.city + ", " + chosenLocation.county;
+              let category = document.getElementById("categoryChosen").value;
+              let url = "{% url 'search' 3 99999999999 99999999991 22222222222 %}"
+              url = url.replace("3", category)
+              url = url.replace("99999999999", longitude)
+              url = url.replace("99999999991", latitude)
+              url = url.replace("22222222222", location)
+              document.location.href = url
+          })
+    </script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper.js/umd/popper.min.js"> </script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

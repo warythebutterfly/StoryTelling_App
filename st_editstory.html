@@ -113,13 +113,15 @@
                         <label class="col-md-3 form-control-label">Location</label>
                         <div class="col-md-9 select mb-3">
                             <!-- IMPLEMENT GOOGLE MAPS DROPDOWN HERE -->
-                          <select name="type" class="form-control" id="storylocation" required>
+              <div class="autocomplete-container" id="autocomplete-container"></div>
+
+                          <!-- <select name="type" class="form-control" id="storylocation" required>
                             <option>Select location</option>
                             <option>option 1</option>
                             <option>option 2</option>
                             <option>option 3</option>
                             <option>option 4</option>
-                          </select>
+                          </select> -->
                         </div>
                        
                       </div>
@@ -229,6 +231,25 @@
       </div>
     </div>
     <!-- JavaScript files-->
+    <script src="address.js"></script>
+    <script>
+        document.getElementById("searchForm").addEventListener("onchange", function(e){
+              e.preventDefault();
+   
+              let longitude = chosenLocation.lon;
+              let latitude = chosenLocation.lat;
+
+              let location = chosenLocation.city + ", " + chosenLocation.county;
+              let category = document.getElementById("categoryChosen").value;
+              let url = "{% url 'search' 3 99999999999 99999999991 22222222222 %}"
+              url = url.replace("3", category)
+              url = url.replace("99999999999", longitude)
+              url = url.replace("99999999991", latitude)
+              url = url.replace("22222222222", location)
+              document.location.href = url
+          });
+          
+    </script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper.js/umd/popper.min.js"> </script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
