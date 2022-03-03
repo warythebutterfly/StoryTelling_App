@@ -134,8 +134,8 @@ function addressAutocomplete(containerElement, callback, options) {
 
           const selElement = document.createElement("select");
           selElement.setAttribute("class", "autocomplete-items form-control rounded");
-          selElement.setAttribute("multiple", "");
-          selElement.setAttribute("style", "height:27px; border-style: hidden;");
+          //selElement.setAttribute("multiple", "");
+          selElement.setAttribute("style", "border-style: hidden; appearance: none;");
 
 
           autocompleteItemsElement.appendChild(selElement);
