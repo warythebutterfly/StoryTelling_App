@@ -16,17 +16,17 @@ function addressAutocomplete(containerElement, callback, options) {
     inputContainerElement.appendChild(inputElement);
   
     // add input field clear button
-    // const clearButton = document.createElement("div");
-    // clearButton.classList.add("clear-button");
-    // addIcon(clearButton);
-    // clearButton.addEventListener("click", (e) => {
-    //   e.stopPropagation();
-    //   inputElement.value = '';
-    //   callback(null);
-    //   clearButton.classList.remove("visible");
-    //   closeDropDownList();
-    // });
-    // inputContainerElement.appendChild(clearButton);
+    const clearButton = document.createElement("div");
+    clearButton.classList.add("clear-button");
+    addIcon(clearButton);
+    clearButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      inputElement.value = '';
+      callback(null);
+      clearButton.classList.remove("visible");
+      closeDropDownList();
+    });
+    inputContainerElement.appendChild(clearButton);
   
     /* We will call the API with a timeout to prevent unneccessary API activity.*/
     let currentTimeout;
@@ -57,12 +57,12 @@ function addressAutocomplete(containerElement, callback, options) {
         });
       }
   
-    //   if (!currentValue) {
-    //     clearButton.classList.remove("visible");
-    //   }
+      if (!currentValue) {
+        clearButton.classList.remove("visible");
+      }
   
       // Show clearButton when there is a text
-      //clearButton.classList.add("visible");
+      clearButton.classList.add("visible");
   
       // Skip empty or short address strings
       if (!currentValue || currentValue.length < MIN_ADDRESS_LENGTH) {
@@ -106,51 +106,21 @@ function addressAutocomplete(containerElement, callback, options) {
           inputContainerElement.appendChild(autocompleteItemsElement);
   
           /* For each item in the results */
-        //   data.results.forEach((result, index) => {
-        //     /* Create a DIV element for each element: */
-        //     const itemElement = document.createElement("option");
-        //     itemElement.setAttribute("class", "autocomplete-items");
-        //     //itemElement.setAttribute("multiple", "");
-           
-            
-
-
-        //     /* Set formatted address as item value */
-        //     itemElement.value = result.formatted;
-        //     autocompleteItemsElement.appendChild(itemElement);
+          data.results.forEach((result, index) => {
+            /* Create a DIV element for each element: */
+            const itemElement = document.createElement("div");
+            /* Set formatted address as item value */
+            itemElement.innerHTML = result.formatted;
+            autocompleteItemsElement.appendChild(itemElement);
   
-        //     /* Set the value for the autocomplete text field and notify: */
-        //     itemElement.addEventListener("click", function(e) {
-        //       inputElement.value = currentItems[index].formatted;
-        //       callback(currentItems[index]);
-        //       /* Close the list of autocompleted values: */
-        //       closeDropDownList();
-        //     });
-        //   });
-
-          const selElement = document.createElement("select");
-            selElement.setAttribute("class", "autocomplete-items form-control rounded");
-            selElement.setAttribute("multiple", "");
-
-            autocompleteItemsElement.appendChild(selElement);
-
-            data.results.forEach((result,index)=>{
-                var option = document.createElement("option");
-              option.value = result.formatted;
-              option.text = result.formatted;
-           selElement.appendChild(option);
-
             /* Set the value for the autocomplete text field and notify: */
-            selElement.addEventListener("click", function(e) {
-                inputElement.value = currentItems[index].formatted;
-                console.log(inputElement.value);
-                callback(currentItems[index]);
-                /* Close the list of autocompleted values: */
-                closeDropDownList();
-              });
-            })
-
-         
+            itemElement.addEventListener("click", function(e) {
+              inputElement.value = currentItems[index].formatted;
+              callback(currentItems[index]);
+              /* Close the list of autocompleted values: */
+              closeDropDownList();
+            });
+          });
   
         }, (err) => {
           if (!err.canceled) {
