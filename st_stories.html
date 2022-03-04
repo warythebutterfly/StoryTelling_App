@@ -39,8 +39,11 @@
           
           <li class="nav-item dropdown ml-auto"><a id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><img src="img/avatar-6.jpg" alt="Jason Doe" style="max-width: 2.5rem;" class="img-fluid rounded-circle shadow"></a>
             <div aria-labelledby="userInfo" class="dropdown-menu"><a href="#" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Mark Stephen</strong><small>Story Teller</small></a>
-              <div class="dropdown-divider"></div><a data-toggle="modal" data-target="#editProfileModal" class="dropdown-item">Edit Profile</a><a data-toggle="modal" data-target="#changePasswordModal" class="dropdown-item">Change Password</a>
-              <div class="dropdown-divider"></div><a href="st_signin.html" class="dropdown-item">Logout</a>
+              <div class="dropdown-divider"></div><a data-toggle="modal" data-target="#editProfileModal" class="dropdown-item">Edit Profile</a>
+              <a data-toggle="modal" data-target="#changePasswordModal" class="dropdown-item">Change Password</a>
+              <div class="dropdown-divider"></div>
+              <a data-toggle="modal" data-target="#deleteAccountModal" class="dropdown-item">Delete Account</a>
+              <a href="st_signin.html" class="dropdown-item">Logout</a>
             </div>
           </li>
         </ul>
@@ -267,7 +270,27 @@
             </div>
           </div>
 
-          <!-- Delte Story Modal-->
+          <!-- Delte Account Modal-->
+          <div id="deleteAccountModal" tabindex="-1" role="dialog" aria-labelledby="deleteAccountModalLabel" aria-hidden="true" class="modal fade text-left">
+            <div role="document" class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 id="deleteAccount" style="color: #004ef9;" class="modal-title navbar-brand font-weight-bold text-uppercase text-base">Delete Account</h4>
+                  <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to delete your account?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="btndeletestory" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                  <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delete Story Modal-->
           <div id="deleteStoryModal" tabindex="-1" role="dialog" aria-labelledby="deleteStoryModalLabel" aria-hidden="true" class="modal fade text-left">
             <div role="document" class="modal-dialog">
               <div class="modal-content">
