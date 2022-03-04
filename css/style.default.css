@@ -4209,6 +4209,10 @@ table {
   border: 1px solid #eee;
 }
 
+#myStoriesTable td {
+padding: 1rem 1rem;
+}
+
 #myStoriesTable th {
   padding: 1.5rem 2rem;
   background-color: #4680ff;
