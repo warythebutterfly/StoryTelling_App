@@ -23,6 +23,9 @@
         <link rel="stylesheet" href="css/custom.css">
         <!-- Favicon-->
         <link rel="shortcut icon" href="img/favicon.png?3">
+        <!--Fontawesome-->
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome">
+        <script src="https://kit.fontawesome.com/5da43224bf.js" crossorigin="anonymous"></script>
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -51,7 +54,7 @@
               <li class="sidebar-list-item"><a href="st_index.html" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
               <li class="sidebar-list-item"><a href="st_addstory.html" class="sidebar-link text-muted"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Add Story</span></a></li>
               <li class="sidebar-list-item"><a href="st_stories.html" class="sidebar-link text-muted active"><i class="o-table-content-1 mr-3 text-gray"></i><span>My Stories</span></a></li>
-              <li class="sidebar-list-item"><a href="ss_index.html" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Seek</span></a></li>
+              <li class="sidebar-list-item"><a href="ss_index.html" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Seek Stories</span></a></li>
            
           </li>
         </ul>
@@ -64,18 +67,130 @@
         <div class="container-fluid px-xl-5">
           <section class="py-5">
             <div class="row">
-
-                <h3>Nothing to see here yet...</h3>
-                <!-- TABLE SHOWING ALL MARK STEPHEN STORIES -->
-                <!-- COLUMNS !!! --> 
-                <!-- S/N  -->
-                <!-- TITLE -->
-                <!-- TYPE -->
-                <!-- BRIEF BODY  -->
+              <!-- TABLE SHOWING ALL MARK STEPHEN STORIES -->
+              <div id = "StoriesTable">
+                <table class="storiesTable" id = "myStoriesTable">
+                  <div>
+                  <tr>
+                    <th>S/N</th>
+                    <th>TITLE</th>
+                    <th>TYPE</th>
+                    <th>BRIEF BODY</th>
+                    <th>LOCATION</th>
+                    <th>  </th>
+                    <th>  </th>
+                  </tr>
+                  </div>
+                  <div>
+                  <tr>
+                    <td>1</td>
+                    <td>Hometown</td>
+                    <td>Fable</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
+                    <td>Lagos</td>
+                    <td>
+                      <a href="st_editstory.html">
+                        Edit story
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                    </td>
+                    <td>
+                      <a id = "deleteStory" data-toggle="modal" data-target="#deleteStoryModal">
+                        Delete Story
+                        <i class="fa-solid fa-trash-can" ></i>
+                      </a>
+                    </td> 
+                  </tr>
+                </div>
                 
-                <!-- LOCATION -->
-                <!-- ACTION (TWO BUTTONS >>> EDIT AND DELETE ICONS) -->
-
+                <div>
+                  <tr>
+                    <td>2</td>
+                    <td>Sleeping beauty</td>
+                    <td>Fairy Tale</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing....</td>
+                    <td>Singapore</td>
+                    <td>
+                      <a href="st_editstory.html">
+                        Edit story
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                    </td>
+                    <td>
+                      <a id = "deleteStory" data-toggle="modal" data-target="#deleteStoryModal">
+                        Delete Story
+                        <i class="fa-solid fa-trash-can" ></i>
+                      </a>
+                    </td> 
+                  </tr>
+                </div>
+                <div>
+                  <tr>
+                    <td>3</td>
+                    <td>Road</td>
+                    <td>Fiction</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
+                    <td>Kogi</td>
+                    <td>
+                      <a href="st_editstory.html">
+                        Edit story
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                    </td>
+                    <td>
+                      <a id = "deleteStory" data-toggle="modal" data-target="#deleteStoryModal">
+                        Delete Story
+                        <i class="fa-solid fa-trash-can" ></i>
+                      </a>
+                    </td> 
+                  </tr>
+                </div>
+                <div>
+                  <tr>
+                    <td>4</td>
+                    <td>Wahter</td>
+                    <td>Short Story</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
+                    <td>Calabar</td>
+                    <td>
+                      <a href="st_editstory.html">
+                        Edit story
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                    </td>
+                    <td>
+                      <a id = "deleteStory" data-toggle="modal" data-target="#deleteStoryModal">
+                        Delete Story
+                        <i class="fa-solid fa-trash-can" ></i>
+                      </a>
+                    </td> 
+                  </tr>
+                </div>
+                <div>
+                  <tr>
+                    <td>5</td>
+                    <td>Rock</td>
+                    <td>Fairy Tale</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
+                    <td>Port Harcourt</td>
+                    <td>
+                      <a href="st_editstory.html">
+                        Edit story
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                    </td>
+                    <td>
+                      <a id = "deleteStory" data-toggle="modal" data-target="#deleteStoryModal">
+                        Delete Story
+                        <i class="fa-solid fa-trash-can" ></i>
+                      </a>
+                    </td> 
+                  </tr>
+                </div>
+                
+                </table>
+              </div>
+                
 
 
                <!--Edit Profile Modal-->
@@ -203,6 +318,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper.js/umd/popper.min.js"> </script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/5da43224bf.js" crossorigin="anonymous"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>

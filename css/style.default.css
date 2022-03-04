@@ -4189,3 +4189,55 @@ code {
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #6c757d;
 }
+
+
+table {
+  width: fit-content;
+  height:max-content;
+}
+
+#myStoriesTable {
+  display: table;
+  position: relative; 
+  width: 100%;
+  height: 20%;
+  table-layout: fixed;
+  text-align: center;
+}
+
+#myStoriesTable tr {
+  border: 1px solid #eee;
+}
+
+#myStoriesTable td {
+padding: 1rem 1rem;
+}
+
+#myStoriesTable th {
+  padding: 1.5rem 2rem;
+  background-color: #4680ff;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+#myStoriesTable th:first-child {
+  border-radius: calc(1rem - 1px) 0 0 0;
+}
+
+#myStoriesTable th:last-child {
+  border-radius: 0 calc(1rem - 1px) 0 0;
+}
+
+#myStoriesTable th, #myStoriesTable td {
+  margin: 2rem 0;
+  padding: auto;
+}
+
+a{
+  text-decoration: none;
+  color:black ;
+}
+
+#deleteStory {
+  cursor: pointer;
+}
