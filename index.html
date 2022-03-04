@@ -155,7 +155,7 @@
             <!-- Section Heading -->
             <div class="section-heading">
               <p>About us</p>
-              <h2><span>Let Us</span> Tell You Our Story</h2>
+              <h2><span>Let Us Tell</span> You Our Story</h2>
               <img src="img/bookdecor3.png" style="width:123px; height:20px;" alt="">
             </div>
             <p>We empower diverse voices and stories all over the world, helping you build a community of readers. We
@@ -225,7 +225,7 @@
                 <img src="img/getfeatured.PNG" alt="">
                 <h5>Get Featured</h5>
               </div>
-              <p>As story seekers connect to your story that projects lasting impact, you can be get featured in their
+              <p>As story seekers connect to your story that projects lasting impact, you can get featured in their
                 all read stories list.</p>
             </div>
           </div>
@@ -364,23 +364,23 @@
             </div>
             <!-- Contact Form Area -->
             <div class="contact-form-area">
-              <form action="index.html" method="post">
+              <form id="contactForm">
                 <div class="row">
                   <div class="col-lg-6">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name">
+                    <input id="name" type="text" class="form-control" name="name" placeholder="Your Name">
                   </div>
                   <div class="col-lg-6">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email">
+                    <input id="email" type="email" class="form-control" name="email" placeholder="Your Email">
                   </div>
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Your Subject">
+                    <input id="subject" type="text" class="form-control" name="subject" placeholder="Your Subject">
                   </div>
                   <div class="col-12">
-                    <textarea name="message" class="form-control" cols="30" rows="10"
+                    <textarea id="message" name="message" class="form-control" cols="30" rows="10"
                       placeholder="Your Message"></textarea>
                   </div>
                   <div class="col-12">
-                    <button type="submit" class="btn famie-btn">Send Message</button>
+                    <button type="submit" id="btncontact" class="btn famie-btn">Send Message</button>
                   </div>
                 </div>
               </form>
@@ -491,8 +491,10 @@
   <!-- ##### Footer Area End ##### -->
 
   <!-- ##### All Javascript Files ##### -->
+  <script src="vendor/sweetalert/sweetalert.min.js"></script>
+  <script src="custom/custom.js"></script>
   <!-- jquery 2.2.4  -->
-  <!-- <script src="js/jquery.min.js"></script> -->
+  <script src="js/jquery.min.js"></script>
   <!-- Popper js -->
   <script src="js/popper.min.js"></script>
   <!-- Bootstrap js -->
