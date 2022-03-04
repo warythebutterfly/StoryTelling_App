@@ -56,7 +56,7 @@ $('#addStoryForm').submit(function (e) {
     
     var data = {
         title:$('#storytitle').val(),
-        loaction:$('#email').val(),
+        storyLocation:$('#storylocation').val(),
         locationImage: $('#img').val(),
         storyType: $('#storytype').val(),
         body:$('#storybody').val(),
