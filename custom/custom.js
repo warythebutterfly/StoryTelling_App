@@ -188,18 +188,6 @@ function editStory(){
     $("#btnedit").attr("disabled", "disabled");
     window.setTimeout(function() {
      
-      // swal({
-      //   title:"Login Succeessful",
-      //   type: "success",
-      //   showCancelButton:true
-      // },
-      // function(isConfirm){
-      //   debugger;
-      //   setTimeout(function(){
-
-      //   })
-      // }
-      // )
       swal("Updated Successfully", "Thank you for sharing your unique voice and original story", "success");
       $("#btnedit").removeAttr("disabled");
                 $("#btnedit").html("Save changes");
