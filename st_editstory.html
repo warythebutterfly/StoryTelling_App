@@ -51,7 +51,9 @@
             <div class="dropdown-divider"></div><a data-toggle="modal" data-target="#editProfileModal"
               class="dropdown-item">Edit Profile</a><a data-toggle="modal" data-target="#changePasswordModal"
               class="dropdown-item">Change Password</a>
-            <div class="dropdown-divider"></div><a href="st_signin.html" class="dropdown-item">Logout</a>
+            <div class="dropdown-divider"></div>
+            <a data-toggle="modal" data-target="#deleteAccountModal" class="dropdown-item">Delete Account</a>
+            <a href="st_signin.html" class="dropdown-item">Logout</a>
           </div>
         </li>
       </ul>
@@ -248,6 +250,24 @@
                 </div>
               </div>
             </div>
+            <!-- Delete Account Modal-->
+          <div id="deleteAccountModal" tabindex="-1" role="dialog" aria-labelledby="deleteAccountModalLabel" aria-hidden="true" class="modal fade text-left">
+            <div role="document" class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 id="deleteAccount" style="color: #004ef9;" class="modal-title navbar-brand font-weight-bold text-uppercase text-base">Delete Account</h4>
+                  <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to delete your account?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="btndeletestory" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                  <button type="button" data-dismiss="modal" class="btn btn-secondary">No</button>
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
         </section>
       </div>
