@@ -49,32 +49,59 @@ $('#signUpForm').submit(function (e) {
     }
 });
 
-$('#addStoryForm').submit(function (e) {
+//  $('#addStoryForm').submit(function (e) {
     
-    e.preventDefault();
-    //console.log("before contact form");
+//     e.preventDefault();
+//     //console.log("before contact form");
     
-    var data = {
-        title:$('#storytitle').val(),
-        storyLocation:$('#storylocation').val(),
-        locationImage: $('#img').val(),
-        storyType: $('#storytype').val(),
-        body:$('#storybody').val(),
+//     var data = {
+//         title:$('#storytitle').val(),
+//         storyLocation:$('#storylocation').val(),
+//         locationImage: $('#img').val(),
+//         storyType: $('#storytype').val(),
+//         body:$('#storybody').val(),
         
-    }
+//     }
 
 
-    console.log(data); 
-    if(data.email != "" || data.password != "" || data.firstname != "" || data.lastname != "" || data.confirmPassword != ""){
-       if(data.password == data.confirmPassword) signUp();
-       else swal("Not yet", "Passwords do not match", "warning");
-    }
-    else{
+//     console.log(data); 
+//     if(data.title != "" || data.storyLocation != "" || data.locationImage != "" || data.storyType != "" || data.body != ""){
+//        createStory();
+       
+//     }
+//     else{
 
-      swal("Not yet", "All fields are required", "warning");
+//       swal("Not yet", "All fields are required!", "warning");
 
-    }
-});
+//     }
+// });
+
+// $('#editStoryForm').submit(function (e) {
+    
+//     e.preventDefault();
+//     //console.log("before contact form");
+    
+//     var data = {
+//         title:$('#storytitle').val(),
+//         storyLocation:$('#storylocation').val(),
+//         locationImage: $('#img').val(),
+//         storyType: $('#storytype').val(),
+//         body:$('#storybody').val(),
+        
+//     }
+
+
+//     console.log(data); 
+//     if(data.title != "" || data.storyLocation != "" || data.locationImage != "" || data.storyType != "" || data.body != ""){
+//        editStory();
+       
+//     }
+//     else{
+
+//       swal("Not yet", "All fields are required!", "warning");
+
+//     }
+// });
 
 function signIn(){
 
@@ -123,6 +150,59 @@ function signUp(){
       swal("Signup Successful", "You will be redirected shortly", "success");
       $("#btnSubmitForm").removeAttr("disabled");
                 $("#btnSubmitForm").html("Sign Up");
+    console.log("i got here;");
+    //window.setTimeout(window.location.assign("st_index.html"), 10000);
+    }, 3000);
+};
+
+
+function createStory(){
+
+    $("#btnadd").html("<i class = 'fa fa-spinner fa-spin'></i> Please Wait").css('margin', '10px');
+    $("#btnadd").attr("disabled", "disabled");
+    window.setTimeout(function() {
+     
+      // swal({
+      //   title:"Login Succeessful",
+      //   type: "success",
+      //   showCancelButton:true
+      // },
+      // function(isConfirm){
+      //   debugger;
+      //   setTimeout(function(){
+
+      //   })
+      // }
+      // )
+      swal("Created Successfully", "Thank you for sharing your unique voice and original story", "success");
+      $("#btnadd").removeAttr("disabled");
+                $("#btnadd").html("Create Story");
+    console.log("i got here;");
+    //window.setTimeout(window.location.assign("st_index.html"), 10000);
+    }, 3000);
+};
+
+function editStory(){
+
+    $("#btnedit").html("<i class = 'fa fa-spinner fa-spin'></i> Please Wait").css('margin', '10px');
+    $("#btnedit").attr("disabled", "disabled");
+    window.setTimeout(function() {
+     
+      // swal({
+      //   title:"Login Succeessful",
+      //   type: "success",
+      //   showCancelButton:true
+      // },
+      // function(isConfirm){
+      //   debugger;
+      //   setTimeout(function(){
+
+      //   })
+      // }
+      // )
+      swal("Updated Successfully", "Thank you for sharing your unique voice and original story", "success");
+      $("#btnedit").removeAttr("disabled");
+                $("#btnedit").html("Save changes");
     console.log("i got here;");
     //window.setTimeout(window.location.assign("st_index.html"), 10000);
     }, 3000);
