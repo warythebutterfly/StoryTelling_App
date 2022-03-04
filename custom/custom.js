@@ -23,6 +23,7 @@ $('#loginForm').submit(function (e) {
 });
 
 $('#signUpForm').submit(function (e) {
+
     e.preventDefault();
     //console.log("before contact form");
     
@@ -32,6 +33,33 @@ $('#signUpForm').submit(function (e) {
         email: $('#email').val(),
         password: $('#password').val(),
         confirmPassword:$('#confirmpassword').val(),
+        
+    }
+
+
+    console.log(data); 
+    if(data.email != "" || data.password != "" || data.firstname != "" || data.lastname != "" || data.confirmPassword != ""){
+       if(data.password == data.confirmPassword) signUp();
+       else swal("Not yet", "Passwords do not match", "warning");
+    }
+    else{
+
+      swal("Not yet", "All fields are required", "warning");
+
+    }
+});
+
+$('#addStoryForm').submit(function (e) {
+    
+    e.preventDefault();
+    //console.log("before contact form");
+    
+    var data = {
+        title:$('#storytitle').val(),
+        storyLocation:$('#storylocation').val(),
+        locationImage: $('#img').val(),
+        storyType: $('#storytype').val(),
+        body:$('#storybody').val(),
         
     }
 
