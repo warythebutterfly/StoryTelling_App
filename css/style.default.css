@@ -4190,22 +4190,21 @@ code {
   color: #6c757d;
 }
 
-
-table {
-  width: fit-content;
-  height:max-content;
+#StoriesTable {
+overflow-x: auto;
 }
 
 #myStoriesTable {
   display: table;
   position: relative; 
   width: 100%;
-  table-layout: fixed;
-  text-align: center;
+  table-layout:auto;
+  text-align: center; 
 }
 
-#myStoriesTable tr {
+tbody tr {
   border: 1px solid #eee;
+  height: 30%;
 }
 
 #myStoriesTable td {
@@ -4243,11 +4242,6 @@ a{
   cursor: pointer;
 }
 
-#actions{
-  display: flex;
-}
-
-#actions i {
-  font-size:larger ;
-  padding: 0 1.8rem ;
+.action i {
+  font-size: larger ;
 }
