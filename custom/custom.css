@@ -1,3 +1,81 @@
 h1, h2, nav{
     text-align: center;
 }
+
+#StoriesTable {
+    overflow-x: auto;
+}
+    
+#myStoriesTable {
+      display: table;
+      position: relative; 
+      width: 100% !important;
+      table-layout:auto;
+      text-align: center; 
+    }
+    
+    tbody tr {
+      border: 1px solid #eee;
+      height: 30%;
+    }
+    
+    #myStoriesTable td {
+    padding: 1rem 1rem;
+    height: 20%;
+    
+    }
+    
+    #myStoriesTable th {
+      padding: 1.5rem 2rem;
+      background-color: #4680ff;
+      color: white;
+      font-family: "Poppins", sans-serif;
+    }
+    
+    #myStoriesTable th:first-child {
+      border-radius: calc(1rem - 1px) 0 0 0;
+    }
+    
+    #myStoriesTable th:last-child {
+      border-radius: 0 calc(1rem - 1px) 0 0;
+    }
+    
+    #myStoriesTable th, #myStoriesTable td {
+      margin: 2rem 0;
+      padding: auto;
+    }
+    
+    a{
+      text-decoration: none;
+      color:black ;
+    }
+    
+    #deleteStory {
+      cursor: pointer;
+    }
+    
+    .action i {
+      font-size: larger ;
+    }
+
+    .table-sortable th {
+        cursor: pointer;
+      }
+      
+      .table-sortable .th-sort-asc::after {
+        content: "\25b4";
+      }
+      
+      .table-sortable .th-sort-desc::after {
+        content: "\25be";
+      }
+      
+      .table-sortable .th-sort-asc::after,
+      .table-sortable .th-sort-desc::after {
+        margin-left: 5px;
+      }
+      
+      .table-sortable .th-sort-asc,
+      .table-sortable .th-sort-desc {
+        background: rgba(164, 168, 221, 0.1);
+      }
