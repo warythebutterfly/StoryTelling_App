@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+      include("C:/xampp/htdocs/story/connection.php");
+      include("C:/xampp/htdocs/story/functions.php");
+
+      $user_Login = login_data($con);
+      
+?>
 
 <!DOCTYPE html>
 <html>
@@ -35,31 +44,41 @@
       <div class="container">
         <div class="row align-items-center py-5">
           <div class="col-5 col-lg-7 mx-auto mb-5 mb-lg-0">
-            <div class="pr-lg-5"><img src="../img/ouat.jpg" alt="" class="img-fluid"></div>
-            
+            <div class="pr-lg-5"><img src="../img/wiys.jpg" alt="" class="img-fluid"></div>
           </div>
           <div class="col-lg-5 px-lg-4">
             <h1 class="text-base text-primary text-uppercase mb-4">Sign In</h1>
             <h2 class="mb-4">Welcome back!</h2>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            <form id="loginForm" action="index.html" class="mt-4">
+            <p class="text-muted">Everyone has a story!</p>
+            <form id="loginForm" class="mt-4" method="POST">
               <div class="form-group mb-4">
-                <input type="text" name="username" placeholder="Username or Email address" class="form-control border-0 shadow form-control-lg">
+                <input type="text" name="email" id="email" placeholder="Email address" class="form-control border-0 shadow form-control-lg">
               </div>
               <div class="form-group mb-4">
-                <input type="password" name="passowrd" placeholder="Password" class="form-control border-0 shadow form-control-lg text-violet">
+                <input type="password" name="password" id="password" placeholder="Password" class="form-control border-0 shadow form-control-lg text-violet">
               </div>
               <div class="form-group mb-4">
                 <div class="custom-control custom-checkbox">
-                  <input id="customCheck1" type="checkbox" checked class="custom-control-input">
+                  <input id="customCheck1" type="checkbox" name="remember" value="1" checked class="custom-control-input">
                   <label for="customCheck1" class="custom-control-label">Remember Me</label>
                 </div>
               </div>
               <button type="submit" class="btn btn-primary shadow px-5">Sign in</button>
               <br>
               <br>
-              <small>Don't have an account? <a href="signup.html">Sign up</a></small>
+              <small>Don't have an account? <a href="signup.php">Sign up</a></small>
             </form>
+            <?php
+              if(isset($_COOKIE['email']) and isset($_COOKIE['password'])){
+                $email = $_COOKIE['email'];
+                $pass = $_COOKIE['password'];
+                echo "<script>
+                  document.getElementById('email').value = '$email';
+                  document.getElementById('password').value = '$pass';
+            
+                </script>";
+              }
+            ?>
           </div>
         </div>
         
@@ -73,6 +92,6 @@
     <script src="../vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="../vendor/chart.js/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script src="js/front.js"></script>
+    <script src="../js/front.js"></script>
   </body>
 </html>
