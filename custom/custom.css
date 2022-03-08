@@ -1,3 +1,109 @@
 h1, h2, nav{
     text-align: center;
 }
+
+.searchTable {
+    margin: 0.5rem 1rem;
+    padding: 0.375rem 0.75rem;
+}
+
+.search {
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.75rem;
+}
+
+ #StoriesTable {
+    overflow-x: auto;
+    width: 100%;
+
+}
+
+    
+#myStoriesTable {
+      display: table;
+      position: relative; 
+      table-layout: auto;
+      text-align: center; 
+    }
+    
+    tbody tr {
+      border: 1px solid #eee;
+      height: 30%;
+    }
+    
+    #myStoriesTable td {
+    padding: 1rem 1rem;
+    height: 20%;
+    
+    }
+    
+    #myStoriesTable th {
+      padding: 1.5rem 2rem;
+      background-color: #4680ff;
+      color: white;
+      font-family: "Poppins", sans-serif;
+    }
+    
+    #myStoriesTable th:first-child {
+      border-radius: calc(1rem - 1px) 0 0 0;
+    }
+    
+    #myStoriesTable th:last-child {
+      border-radius: 0 calc(1rem - 1px) 0 0;
+    }
+    
+    #myStoriesTable th, #myStoriesTable td {
+      margin: 2rem 0;
+      padding: auto;
+    }
+    
+    
+    #actions{
+        display: flex;
+      }
+      
+      #actions i {
+        font-size: larger ;
+        padding: 0 1.5rem ;
+    }    
+
+    #actions a{
+        text-decoration: none;
+        color:black ;
+      }
+
+    #deleteStory {
+      cursor: pointer;
+    }
+    
+
+    /* .action i {
+      font-size: larger ;
+      padding: 2rem;
+    } */
+
+    .table-sortable th {
+        cursor: pointer;
+      }
+      
+      .table-sortable .th-sort-asc::after {
+        content: "\25b4";
+      }
+      
+      .table-sortable .th-sort-desc::after {
+        content: "\25be";
+      }
+      
+      .table-sortable .th-sort-asc::after,
+      .table-sortable .th-sort-desc::after {
+        margin-left: 5px;
+      }
+      
+      .table-sortable .th-sort-asc,
+      .table-sortable .th-sort-desc {
+        background: rgba(164, 168, 221, 0.1);
+      }
+
+
+    

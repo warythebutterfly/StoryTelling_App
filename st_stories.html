@@ -24,7 +24,9 @@
         <!-- Favicon-->
         <link rel="shortcut icon" href="img/favicon.png?3">
         <!--Fontawesome-->
-        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome">
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
+        <!--Search table-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
         <script src="https://kit.fontawesome.com/5da43224bf.js" crossorigin="anonymous"></script>
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -38,11 +40,13 @@
          
           
           <li class="nav-item dropdown ml-auto"><a id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><img src="img/avatar-6.jpg" alt="Jason Doe" style="max-width: 2.5rem;" class="img-fluid rounded-circle shadow"></a>
-            <div aria-labelledby="userInfo" class="dropdown-menu"><a href="#" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Mark Stephen</strong><small>Story Teller</small></a>
-              <div class="dropdown-divider"></div><a data-toggle="modal" data-target="#editProfileModal" class="dropdown-item">Edit Profile</a>
-              <a data-toggle="modal" data-target="#changePasswordModal" class="dropdown-item">Change Password</a>
+            <div aria-labelledby="userInfo" class="dropdown-menu">
+              <a data-toggle="modal" data-target="#ProfileModal" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Mark Stephen</strong><small>Story Teller</small></a>
               <div class="dropdown-divider"></div>
+              <a data-toggle="modal" data-target="#editProfileModal" class="dropdown-item">Edit Profile</a>
+              <a data-toggle="modal" data-target="#changePasswordModal" class="dropdown-item">Change Password</a>
               <a data-toggle="modal" data-target="#deleteAccountModal" class="dropdown-item">Delete Account</a>
+              <div class="dropdown-divider"></div>
               <a href="st_signin.html" class="dropdown-item">Logout</a>
             </div>
           </li>
@@ -53,13 +57,10 @@
       <div id="sidebar" class="sidebar py-3">
         <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
         <ul class="sidebar-menu list-unstyled">
-            <!-- GET APPROPRIATE ICONS -->
               <li class="sidebar-list-item"><a href="st_index.html" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
-              <li class="sidebar-list-item"><a href="st_addstory.html" class="sidebar-link text-muted"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Add Story</span></a></li>
-              <li class="sidebar-list-item"><a href="st_stories.html" class="sidebar-link text-muted active"><i class="o-table-content-1 mr-3 text-gray"></i><span>My Stories</span></a></li>
-              <li class="sidebar-list-item"><a href="ss_index.html" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Seek Stories</span></a></li>
-           
-          </li>
+              <li class="sidebar-list-item"><a href="st_addstory.html" class="sidebar-link text-muted"><i class="o-paper-stack-1 mr-3 text-gray"></i><span>Add Story</span></a></li>
+              <li class="sidebar-list-item"><a href="st_stories.html" class="sidebar-link text-muted active"><i class="o-archive-folder-1 mr-3 text-gray"></i><span>My Stories</span></a></li>
+              <li class="sidebar-list-item"><a href="ss_index.html" class="sidebar-link text-muted"><i class="o-search-magnify-1 mr-3 text-gray"></i><span>Seek Stories</span></a></li>           
         </ul>
         <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">EXTRAS</div>
         <ul class="sidebar-menu list-unstyled">
@@ -71,25 +72,28 @@
           <section class="py-5">
             <div class="row">
               <!-- TABLE SHOWING ALL MARK STEPHEN STORIES -->
-              <div id = "StoriesTable">
-                <table class="storiesTable" id = "myStoriesTable">
-                  <div>
+              <div class="searchTable">
+                Search: <input type="text" id="search" class="search">
+              </div>
+              <div id = "StoriesTable" >
+                <table id = "myStoriesTable" class="table-sortable"> 
+                <thead>
                   <tr>
-                    <th>S/N</th>
-                    <th>TITLE</th>
-                    <th>TYPE</th>
-                    <th id="tablebody" style="width: 35%;">BODY</th>
-                    <th>LOCATION</th>
-                    <th>  </th>
+                    <th></th>
+                    <th style="width: 30%;" >TITLE</th>
+                    <th style="width: 20%;" >TYPE</th>
+                    <th style="width: 30%;">LOCATION</th>
+                    <th style="width: 20%;">STATUS</th>
+                    <th></th>
                   </tr>
-                  </div>
-                  <div>
+                </thead>
+                <tbody>
                   <tr>
                     <td>1</td>
                     <td>Hometown</td>
                     <td>Fable</td>
-                    <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati pariatur a sed suscipit, reiciendis fugit tempora, laudantium necessitatibus molestias adipisci cumque fuga. Rem optio similique maiores facere veritatis porro hic...</td>
                     <td>Lagos</td>
+                    <td>Pending</td>
                     <td id= "actions">
                       <div>
                       <a href="st_editstory.html">
@@ -103,15 +107,12 @@
                     </div>
                     </td> 
                   </tr>
-                </div>
-                
-                <div>
                   <tr>
                     <td>2</td>
                     <td>Sleeping beauty</td>
                     <td>Fairy Tale</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing....</td>
                     <td>Singapore</td>
+                    <td>Pending</td>
                     <td id= "actions">
                       <div>
                       <a href="st_editstory.html">
@@ -125,14 +126,12 @@
                     </div>
                     </td> 
                   </tr>
-                </div>
-                <div>
                   <tr>
                     <td>3</td>
                     <td>Road</td>
                     <td>Fiction</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
                     <td>Kogi</td>
+                    <td>Pending</td>
                     <td id= "actions">
                       <div>
                       <a href="st_editstory.html">
@@ -146,14 +145,12 @@
                     </div>
                     </td> 
                   </tr>
-                </div>
-                <div>
                   <tr>
                     <td>4</td>
-                    <td>Wahter</td>
+                    <td>Water</td>
                     <td>Short Story</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
                     <td>Calabar</td>
+                    <td>Pending</td>
                     <td id= "actions">
                       <div>
                       <a href="st_editstory.html">
@@ -167,14 +164,12 @@
                     </div>
                     </td> 
                   </tr>
-                </div>
-                <div>
                   <tr>
                     <td>5</td>
                     <td>Rock</td>
                     <td>Fairy Tale</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit....</td>
                     <td>Port Harcourt</td>
+                    <td>Pending</td>
                     <td id= "actions">
                       <div>
                       <a href="st_editstory.html">
@@ -188,11 +183,56 @@
                     </div>
                     </td> 
                   </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Home</td>
+                    <td>Tragedy</td>
+                    <td>Island</td>
+                    <td>Pending</td>
+                    <td id= "actions">
+                      <div>
+                      <a href="st_editstory.html">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                        </div>
+                        <div>
+                      <a id = "deleteStory" data-toggle="modal" data-target="#deleteStoryModal">
+                        <i class="fa-solid fa-trash-can" ></i>
+                      </a>
+                    </div>
+                    </td> 
+                  </tr>
+                </tbody>
+                </table>    
+                
+                <!-- Profile Modal-->
+          <div id="ProfileModal" tabindex="-1" role="dialog" aria-labelledby="ProfileModalLabel" aria-hidden="true" class="modal fade text-left">
+            <div role="document" class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 id="ProfileModalLabel" style="color: #004ef9;" class="modal-title navbar-brand font-weight-bold text-uppercase text-base">Your Profile</h4>
+                  <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                 </div>
-                
-                </table>
+                <div class="modal-body">
+                  <p>Signed in as @firstname+lastname</p>
+                    <div class="form-group">
+                        <label for="img">Profile Picture</label>
+                      </div>
+                      <div class="line"></div>
+                    <div class="form-group">
+                        <label>Firstname</label>
+                      </div>
+                      <div class="line"></div>
+                      <div class="form-group">
+                        <label>Lastname</label>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                </div>
               </div>
-                
+            </div>
+          </div>
 
 
                <!--Edit Profile Modal-->
@@ -204,8 +244,7 @@
                   <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    <!-- GET CONTENT FOR LOREM -->
-                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                  <p>Signed in as @firstname+lastname</p>
                   <form>
                     <div class="form-group">
                         <label for="img">Profile Picture</label>
@@ -242,8 +281,6 @@
                   <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    <!-- GET CONTENT FOR LOREM -->
-                  <p>Lorem ipsum dolor sit amet consectetur.</p>
                   <form>
                     <div class="form-group">       
                       <label>Old Password</label>
@@ -258,7 +295,7 @@
                         <input type="password" placeholder="Confirm New Password" id="confirnnewpassword" class="form-control">
                       </div>
                     <div class="form-group">       
-                      <input type="submit" id="btnchangepassword" value="Save Changes" class="btn btn-primary">
+                      <input type="submit" id="btnchangepassword" value="Update Password" class="btn btn-primary">
                     </div>
                   </form>
                 </div>
@@ -344,6 +381,15 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="js/front.js"></script>
+     <!-- Jquery datatables -->
+     <script type="text/javascript" charset="utf8" src="sort.js"></script>
+     <!-- <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script> -->
+     <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/searchpanes/2.0.0/js/dataTables.searchPanes.min.js"></script> -->
+     <!-- <script>
+       $(function() {
+         $("#myStoriesTable").dataTable();
+       } );
+     </script> -->
   </body>
 </html>
     
