@@ -13,15 +13,17 @@ h1, h2, nav{
     padding: 0.375rem 0.75rem;
 }
 
-.searchTable, #StoriesTable {
+ #StoriesTable {
     overflow-x: auto;
+    width: 100%;
+
 }
 
     
 #myStoriesTable {
       display: table;
       position: relative; 
-      width: 100%;
+      table-layout: auto;
       text-align: center; 
     }
     
@@ -56,18 +58,30 @@ h1, h2, nav{
       padding: auto;
     }
     
-    a{
-      text-decoration: none;
-      color:black ;
-    }
     
+    #actions{
+        display: flex;
+      }
+      
+      #actions i {
+        font-size: larger ;
+        padding: 0 1.5rem ;
+    }    
+
+    #actions a{
+        text-decoration: none;
+        color:black ;
+      }
+
     #deleteStory {
       cursor: pointer;
     }
     
-    .action i {
+
+    /* .action i {
       font-size: larger ;
-    }
+      padding: 2rem;
+    } */
 
     .table-sortable th {
         cursor: pointer;
