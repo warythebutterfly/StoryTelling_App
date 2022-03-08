@@ -3122,6 +3122,10 @@ button.bg-light:focus {
   background-color: #DF99CA !important;
 }
 
+.bg-orange {
+  background-color: orange !important;
+}
+
 a.bg-violet:hover, a.bg-violet:focus,
 button.bg-violet:hover,
 button.bg-violet:focus {
