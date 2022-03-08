@@ -30,7 +30,34 @@
     table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc);
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
-}
+    }
+
+    $(document).ready(function(){  
+        $('#search').keyup(function(){  
+             search_table($(this).val());  
+        });  
+        function search_table(value){  
+             $('#myStoriesTable tr').each(function(){  
+                  var found = 'false';  
+                  $(this).each(function(){  
+                       if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)  
+                       {  
+                            found = 'true';  
+                       }  
+                  });  
+                  $('#myStoriesTable th').show(); 
+                  if(found === 'true')  
+                  {  
+                    $('#myStoriesTable th').show(); 
+                       $(this).show();  
+                  }  
+                  else  
+                  {  
+                       $(this).hide();  
+                  }  
+             });  
+        }  
+   });  
 
 document.querySelectorAll(".table-sortable th").forEach(headerCell => {
     headerCell.addEventListener("click", () => {

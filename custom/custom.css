@@ -2,15 +2,26 @@ h1, h2, nav{
     text-align: center;
 }
 
-#StoriesTable {
+.searchTable {
+    margin: 0.5rem 1rem;
+    padding: 0.375rem 0.75rem;
+}
+
+.search {
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.75rem;
+}
+
+.searchTable, #StoriesTable {
     overflow-x: auto;
 }
+
     
 #myStoriesTable {
       display: table;
       position: relative; 
-      width: 100% !important;
-      table-layout:auto;
+      width: 100%;
       text-align: center; 
     }
     
@@ -79,3 +90,6 @@ h1, h2, nav{
       .table-sortable .th-sort-desc {
         background: rgba(164, 168, 221, 0.1);
       }
+
+
+    
