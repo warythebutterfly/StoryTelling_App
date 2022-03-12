@@ -40,7 +40,30 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 ///////////////////////////////////////////////////////////
 */
 
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
 
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Italic;
+  src: url('../fonts/poppins/Poppins-Italic.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Black;
+  src: url('../fonts/poppins/Poppins-Black.ttf'); 
+}
 
 @font-face {
   font-family: Poppins-Bold;
@@ -63,13 +86,13 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 body, html {
 	height: 100%;
-	/* font-family: Montserrat-Regular, sans-serif; */
+	font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 
 /* ------------------------------------ */
 a {
-	/* font-family: Montserrat-Regular; */
+	font-family: "Poppins", sans-serif;
   font-weight: 400;
 	font-size: 15px;
 	line-height: 1.7;
@@ -96,7 +119,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	/* font-family: Montserrat-Regular; */
+	font-family: "Poppins", sans-serif;
 	font-size: 15px;
 	line-height: 1.7;
 	color: #888888;
@@ -328,7 +351,7 @@ iframe {
 /* in select */
 .select2-container .select2-selection--single .select2-selection__rendered {
   font-size: 13px;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   line-height: 20px;
   color: #888888;
   padding-left: 0px ;
@@ -395,14 +418,14 @@ iframe {
 
 .select2-results__options {
   font-size: 13px;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   color: #888888;
 }
 
 .select2-search--dropdown .select2-search__field {
   border: 1px solid #aaa;
   outline: none;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   color: #888888;
 }
@@ -548,7 +571,7 @@ iframe {
 /* ------------------------------------ */
 .topbar-email,
 .topbar-child1 {
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   color: #888888;
   line-height: 1.7;
@@ -641,7 +664,7 @@ iframe {
 }
 
 .main_menu > li > a {
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   color: #333333;
   padding: 0;
@@ -706,7 +729,7 @@ li.sale-noti > a {
 
 .sub_menu li, .sub_menu a {
   padding: 10px;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   color: white;
 }
@@ -764,7 +787,7 @@ li.sale-noti > a {
   border-radius: 50%;
   background-color: #111111;
   color: white;
-  /* font-family: Montserrat-Medium; */
+  font-family: Poppins-Medium;
   font-size: 12px;
   position: absolute;
   top: 0;
@@ -891,7 +914,7 @@ li.sale-noti > a {
 
 .header-cart-item-name {
   display: block;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   color: #555555;
   line-height: 1.3;
@@ -900,14 +923,14 @@ li.sale-noti > a {
 
 .header-cart-item-info {
   display: block;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   color: #888888;
   line-height: 1.5;
 }
 
 .header-cart-total {
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   color: #555555;
   line-height: 1.3;
@@ -1039,7 +1062,7 @@ li.sale-noti > a {
 
 .side-menu .main-menu > li > a {
   padding-left: 20px;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   color: white;
   line-height: 2.86;
@@ -1078,7 +1101,7 @@ li.sale-noti > a {
 
 .side-menu .sub-menu a {
   padding-left: 20px;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   color: #333333;
   line-height: 2.5;
@@ -1554,7 +1577,7 @@ li.sale-noti > a {
 
 .swal-button {
     background-color: #4680ff;
-    /* font-family: Montserrat-Regular; */
+    font-family: "Poppins", sans-serif;
     font-size: 15px;
     color: white;
     text-transform: uppercase;
@@ -1576,7 +1599,7 @@ li.sale-noti > a {
 }
 
 .swal-title {
-  /* font-family: Montserrat-Medium; */
+  font-family: Poppins-Medium;
   color: #333333;
   font-size: 16px;
   line-height: 1.5;
@@ -1584,7 +1607,7 @@ li.sale-noti > a {
 }
 
 .swal-text {
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   color: #333333;
   font-size: 15px;
   text-align: center;
@@ -1623,7 +1646,7 @@ li.sale-noti > a {
 .block2-labelnew::before 
 {
   z-index: 100;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   color: white;
   display: -webkit-box;
@@ -1937,7 +1960,7 @@ li.sale-noti > a {
 }
 
 .item-pagination {
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   color: #808080;
   width: 36px;
@@ -2080,7 +2103,7 @@ li.sale-noti > a {
 }
 
 .table-shopping-cart .table-head th {
-  /* font-family: Montserrat-Bold; */
+  font-family: Poppins-Bold;
   font-size: 13px;
   color: #555555;
   line-height: 1.5;
@@ -2090,7 +2113,7 @@ li.sale-noti > a {
 }
 
 .table-shopping-cart td {
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   color: #555555;
   line-height: 1.5;
@@ -2154,7 +2177,7 @@ li.sale-noti > a {
 
 .tag-item {
   display: block;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   color: #888888;
   line-height: 1.5;
@@ -2196,7 +2219,7 @@ li.sale-noti > a {
   border-radius: 0px;
   border: none;
   border-bottom: 1px solid transparent;
-  /* font-family: Montserrat-Regular; */
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   color: #888888;
   line-height: 1.1;
