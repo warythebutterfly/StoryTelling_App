@@ -270,7 +270,7 @@ iframe {
   height: 40px;
   bottom: 40px;
   right: 40px;
-  background-color: black;
+  background-color: #6c757d;;
   opacity: 0.5;
   justify-content: center;
   align-items: center;
@@ -674,7 +674,7 @@ li.sale-noti > a {
   top:0;
   left:100%;
   width: 225px;
-  background-color: #222222;
+  background-color: #6c757d;
   opacity: 0;
   visibility: hidden;
   padding-top: 10px;
@@ -1948,12 +1948,12 @@ li.sale-noti > a {
 }
 
 .item-pagination:hover {
-  background-color: #222222;
+  background-color: #6c757d;
   color: white;
 }
 
 .active-pagination {
-  background-color: #222222;
+  background-color: #6c757d;
   color: white;
 }
 
