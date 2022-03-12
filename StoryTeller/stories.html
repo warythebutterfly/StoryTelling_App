@@ -35,13 +35,13 @@
   <body>
     <!-- navbar-->
     <header class="header">
-      <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><a href="#" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead" ><i class="fas fa-align-left"></i></a><a href="index.html" class="navbar-brand font-weight-bold text-uppercase text-base">Story Telling App</a>
+      <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><a href="#" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead" ><i class="fas fa-align-left"></i></a><a href="../index.html" class="navbar-brand font-weight-bold text-uppercase text-base">Story Telling App</a>
         <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
          
           
           <li class="nav-item dropdown ml-auto"><a id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><img src="../img/avatar-6.jpg" alt="Jason Doe" style="max-width: 2.5rem;" class="img-fluid rounded-circle shadow"></a>
             <div aria-labelledby="userInfo" class="dropdown-menu">
-              <a data-toggle="modal" data-target="#ProfileModal" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Mark Stephen</strong><small>Story Teller</small></a>
+              <a data-toggle="modal" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Mark Stephen</strong><small>Story Teller</small></a>
               <div class="dropdown-divider"></div>
               <a data-toggle="modal" data-target="#editProfileModal" class="dropdown-item">Edit Profile</a>
               <a data-toggle="modal" data-target="#changePasswordModal" class="dropdown-item">Change Password</a>
@@ -60,7 +60,7 @@
               <li class="sidebar-list-item"><a href="index.html" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
               <li class="sidebar-list-item"><a href="addstory.html" class="sidebar-link text-muted"><i class="o-paper-stack-1 mr-3 text-gray"></i><span>Add Story</span></a></li>
               <li class="sidebar-list-item"><a href="stories.html" class="sidebar-link text-muted active"><i class="o-archive-folder-1 mr-3 text-gray"></i><span>My Stories</span></a></li>
-              <li class="sidebar-list-item"><a href="ss_index.html" class="sidebar-link text-muted"><i class="o-search-magnify-1 mr-3 text-gray"></i><span>Seek Stories</span></a></li>           
+              <li class="sidebar-list-item"><a href="../StorySeeker/index.html" class="sidebar-link text-muted"><i class="o-search-magnify-1 mr-3 text-gray"></i><span>Seek Stories</span></a></li>           
         </ul>
         <!-- <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">EXTRAS</div>
         <ul class="sidebar-menu list-unstyled">
@@ -72,19 +72,18 @@
           <section class="py-5">
             <div class="row">
               <!-- TABLE SHOWING ALL MARK STEPHEN STORIES -->
-              <div class="searchTable">
-                Search: <input type="text" id="search" class="search">
-              </div>
               <div id = "StoriesTable" >
                 <table id = "myStoriesTable" class="table-sortable"> 
                 <thead>
                   <tr>
-                    <th></th>
-                    <th style="width: 30%;" >TITLE</th>
-                    <th style="width: 20%;" >TYPE</th>
-                    <th style="width: 30%;">LOCATION</th>
-                    <th style="width: 20%;">STATUS</th>
-                    <th></th>
+                    <tr>
+                      <th></th>
+                      <th style="width: 40%;" >TITLE</th>
+                      <th style="width: 25%;" >TYPE</th>
+                      <th style="width: 40%;">LOCATION</th>
+                      <th style="width: 25%;">STATUS</th>
+                      <th></th>
+                    </tr>
                   </tr>
                 </thead>
                 <tbody>
@@ -205,34 +204,6 @@
                 </tbody>
                 </table>    
                 
-                <!-- Profile Modal-->
-          <div id="ProfileModal" tabindex="-1" role="dialog" aria-labelledby="ProfileModalLabel" aria-hidden="true" class="modal fade text-left">
-            <div role="document" class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 id="ProfileModalLabel" style="color: #004ef9;" class="modal-title navbar-brand font-weight-bold text-uppercase text-base">Your Profile</h4>
-                  <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                </div>
-                <div class="modal-body">
-                  <p>Signed in as @firstname+lastname</p>
-                    <div class="form-group">
-                        <label for="img">Profile Picture</label>
-                      </div>
-                      <div class="line"></div>
-                    <div class="form-group">
-                        <label>Firstname</label>
-                      </div>
-                      <div class="line"></div>
-                      <div class="form-group">
-                        <label>Lastname</label>
-                      </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
 
 
                <!--Edit Profile Modal-->
@@ -381,14 +352,12 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="../js/front.js"></script>
      <!-- Jquery datatables -->
-     <script type="text/javascript" charset="utf8" src="../sort.js"></script>
-     <!-- <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script> -->
-     <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/searchpanes/2.0.0/js/dataTables.searchPanes.min.js"></script> -->
-     <!-- <script>
+     <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+     <script>
        $(function() {
          $("#myStoriesTable").dataTable();
        } );
-     </script> -->
+     </script>
   </body>
 </html>
     
