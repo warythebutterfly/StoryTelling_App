@@ -43,36 +43,44 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  src: url('../fonts/poppins/Poppins-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       
 }
 
 @font-face {
   font-family: Poppins-Medium;
   src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  src: url('../fonts/poppins/Poppins-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 @font-face {
   font-family: Poppins-Bold;
   src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  src: url('../fonts/poppins/Poppins-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 @font-face {
   font-family: Poppins-Italic;
   src: url('../fonts/poppins/Poppins-Italic.ttf'); 
+  src: url('../fonts/poppins/Poppins-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 @font-face {
   font-family: Poppins-Black;
   src: url('../fonts/poppins/Poppins-Black.ttf'); 
+  src: url('../fonts/poppins/Poppins-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 @font-face {
   font-family: Poppins-Bold;
   src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  src: url('../fonts/poppins/Poppins-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 @font-face {
   font-family: Poppins-Black;
   src: url('../fonts/poppins/Poppins-Black.ttf'); 
+  src: url('../fonts/poppins/Poppins-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 /*[ RESTYLE TAG ]
