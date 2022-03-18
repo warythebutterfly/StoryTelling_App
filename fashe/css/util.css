@@ -2354,10 +2354,12 @@
 /*[ Wrap Picture ]
 -----------------------------------------------------------
 */
+.thumb-pic img{width: 70%; margin: 0 auto;}
 .wrap-pic-w img {width: 100%;}
 .wrap-pic-max-w img {max-width: 100%;}
 
 /* ------------------------------------ */
+.thumb-pic img{height: 70%;}
 .wrap-pic-h img {height: 100%;}
 .wrap-pic-max-h img {max-height: 100%;}
 
