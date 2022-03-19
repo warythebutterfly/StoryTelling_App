@@ -6,7 +6,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Index | Admin</title>
+    <title>Admin | Story Details</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -171,8 +171,13 @@
                                 <p class="s-text8 p-t-10">
                                     Location of Story
                                 </p>
-                
-                               
+
+                                <p class="s-text8 p-t-10" style="display: inline-block;">
+                                    Status: &nbsp;
+                                <div class="icon-admin text-white bg-blue"><i class="fas fa-spinner fa-spin"></i></div>
+                                </p>
+
+
                                 <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
                                     <h5
                                         class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
@@ -183,14 +188,17 @@
 
                                     <div class="dropdown-content p-t-15 p-b-23">
                                         <p class="s-text8">
-                                            Story Body Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum
+                                            Story Body Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at
+                                            ipsum
                                             blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris
-                                            placerat Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum
+                                            placerat Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at
+                                            ipsum
                                             blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris
                                             placerat
                                             Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum
                                             blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris
-                                            placerat Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum
+                                            placerat Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at
+                                            ipsum
                                             blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris
                                             placerat
                                             Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum
@@ -200,20 +208,21 @@
                                     </div>
                                 </div>
                                 <div class="w-size16 flex-m flex-w">
-                                           
+
+
+                                    <div style="display: inline-block;">
+                                        <!-- Button -->
+                                        <br>
+                                        <button id="approvebtn" class="btn btn-primary" style="float: left;">
+                                            Approve
+                                        </button> &nbsp; <button id="disapprovebtn" class="btn btn-secondary" style="float: left; margin-left: 5px;">
+                                            Disapprove
+                                        </button>
+                                    </div>
 
                                     <div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
                                         <!-- Button -->
-                                        <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-                                            Approve
-                                        </button>
-                                    </div>
-                                    &nbsp;
-                                    <div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
-                                        <!-- Button -->
-                                        <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-                                            Disapprove
-                                        </button>
+
                                     </div>
                                 </div>
 
@@ -368,6 +377,8 @@
             });
         });
     </script>
+    <script src="../vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="../custom/custom.js"></script>
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/popper.js/umd/popper.min.js"> </script>
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
