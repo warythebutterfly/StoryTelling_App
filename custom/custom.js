@@ -210,6 +210,46 @@ function contact(){
     }, 3000);
 };
 
+
+// Admin Script //
+$('#approvebtn').click(function (e) {
+
+  e.preventDefault();
+ 
+    swal("Story Approved", "You have approved this story", "success");
+  
+ 
+});
+
+$('#disapprovebtn').click(function (e) {
+
+  e.preventDefault();
+ 
+    swal("Story Disapproved", "You have disapproved this story", "success");
+  
+ 
+});
+
+$('#activatebtn').click(function (e) {
+
+  e.preventDefault();
+ 
+    swal("Story Teller Activated", "You have activated this story teller", "success");
+  
+ 
+});
+
+$('#deactivatebtn').click(function (e) {
+
+  e.preventDefault();
+ 
+    swal("Story Teller Deactivated", "You have deactivated this story teller", "success");
+  
+ 
+});
+
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -236,3 +276,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
