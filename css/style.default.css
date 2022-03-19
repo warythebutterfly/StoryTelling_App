@@ -1411,6 +1411,12 @@ button {
 /*[ rs Sweetalert ]
 ///////////////////////////////////////////////////////////
 */
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fashe/fonts/poppins/Poppins-Medium.ttf'); 
+  src: url('../fashe/fonts/poppins/Poppins-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 .swal-overlay {
   overflow-y: auto;
 }
