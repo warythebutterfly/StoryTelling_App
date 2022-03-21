@@ -1297,7 +1297,7 @@ button {
 
 .sidebar.shrink .sidebar-link span {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.75rem !important;
 }
 
 .sidebar.shrink .sidebar-link i {
@@ -1324,7 +1324,7 @@ button {
   }
   .sidebar .sidebar-link span {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.75rem !important;
   }
   .sidebar .sidebar-link i {
     margin: 0 !important;
@@ -1416,6 +1416,10 @@ button {
   font-family: Poppins-Medium;
   src: url('../fashe/fonts/poppins/Poppins-Medium.ttf'); 
   src: url('../fashe/fonts/poppins/Poppins-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: Linearicons;
+  src: url('../fashe/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf'); 
 }
 .swal-overlay {
   overflow-y: auto;
@@ -2929,7 +2933,7 @@ STYLE SWITCHER FOR DEMO
  */
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.9rem !important;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
