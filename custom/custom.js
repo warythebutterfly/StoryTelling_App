@@ -250,6 +250,8 @@ $('#deactivatebtn').click(function (e) {
 
 
 
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
