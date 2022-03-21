@@ -10,20 +10,16 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
+    <link href="../css/dataTables.bootstrap.css" rel="stylesheet" />
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <!-- jQuery Datatable -->
     <link rel="stylesheet" href="../css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css" />
-    <link href="../css/dataTables.bootstrap.css" rel="stylesheet" />
-    <style>
-        a .underline:hover {
-            text-decoration: underline;
-        }
-    </style>
+   
 
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"> -->
+    <!-- <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> -->
 
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
@@ -595,37 +591,37 @@
     <script>
         $(document).ready(function () {
             $('#storiesTable').DataTable({
-                "paging": true,
-                "pagingType": "full_numbers"
+              "paging":false
             });
         });
 
         $(document).ready(function () {
             $('#usersTable').DataTable({
-                "paging": true,
-                //"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                // "dom": '<"top"i>rt<"bottom"flp><"clear">',
-                "pagingType": "full_numbers"
+                "bPaginate": false,
+             
             });
         });
     </script>
     <script src="../vendor/jquery/jquery.min.js"></script>
+
+     <!--Data Table-->
+
+     <script src="../scripts/jquery.dataTables.min.js"></script>
+     <script src="../scripts/dataTables.bootstrap.js"></script>
+     <script src="../scripts/jquery.dataTables.buttons.min.js"></script>
+     <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.colVis.min.js"></script>
+     <script src="../scripts/jquery.buttons.html5.min.js"></script>
+     <script src="../scripts/jquery.jszip.min.js"></script>
+     <script src="../scripts/jquery.buttons.print.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="../vendor/popper.js/umd/popper.min.js"> </script>
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="../vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="../vendor/chart.js/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <!--Data Table-->
-    <script src="../scripts/jquery.dataTables.min.js"></script>
-    <script src="../scripts/dataTables.bootstrap.js"></script>
-    <script src="../scripts/jquery.dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.colVis.min.js"></script>
-    <script src="../scripts/jquery.buttons.html5.min.js"></script>
-    <script src="../scripts/jquery.jszip.min.js"></script>
-    <script src="../scripts/jquery.buttons.print.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="../js/front.js"></script>
+   
 </body>
 
 </html>
